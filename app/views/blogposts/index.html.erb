@@ -1,0 +1,6 @@
+<h1>Welcome to Martin Loekito's blog</h1>
+<%= link_to "create new post", new_blogpost_path %>
+
+<% @blogposts.each do |blogpost| %>
+<h3><%= link_to blogpost.title, blogpost_path(blogpost) %></h3> - <h5><%= blogpost.author %></h5>
+<% end %>
